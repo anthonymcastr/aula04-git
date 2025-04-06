@@ -32,6 +32,10 @@ while(true){
                 aumentarMarcha(carro);
                 break;
 
+            case 4:
+                reduzirMarcha(carro);
+                break;
+
         default:
             break;
     }
@@ -67,5 +71,14 @@ function aumentarMarcha(veiculo: Veiculo): void{
         console.log(veiculo.marchaAtual);
     }else{
         console.log("Já está na marcha máxima!");
+    }
+}
+
+function reduzirMarcha(veiculo: Veiculo): void{
+    if(veiculo.marchaAtual > 0){
+        veiculo.marchaAtual--;
+        console.log(veiculo.marchaAtual);
+    }else{
+        console.log("Já está na marcha mínima!");
     }
 }
