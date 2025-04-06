@@ -28,6 +28,10 @@ while(true){
                 frear(carro);
                 break;
 
+            case 3:
+                aumentarMarcha(carro);
+                break;
+
         default:
             break;
     }
@@ -57,3 +61,11 @@ function frear(veiculo: Veiculo): void{
         
 }}
 
+function aumentarMarcha(veiculo: Veiculo): void{
+    if(veiculo.marchaAtual < veiculo.numeroMarchas){
+        veiculo.marchaAtual++;
+        console.log(veiculo.marchaAtual);
+    }else{
+        console.log("Já está na marcha máxima!");
+    }
+}
