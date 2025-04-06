@@ -35,7 +35,11 @@ while(true){
             case 4:
                 reduzirMarcha(carro);
                 break;
-
+            case 5:
+                estatisticas(carro);    
+                break;
+            case 0:
+                console.log("Saindo...");
         default:
             break;
     }
@@ -81,4 +85,14 @@ function reduzirMarcha(veiculo: Veiculo): void{
     }else{
         console.log("Já está na marcha mínima!");
     }
+}
+
+function estatisticas(veiculo: Veiculo): void{
+    console.log("Marca: " + veiculo.marca);
+    console.log("Modelo: " + veiculo.modelo);
+    console.log("Potência: " + veiculo.potencia);
+    console.log("Número de marchas: " + veiculo.numeroMarchas); 
+    console.log("Marcha atual: " + veiculo.marchaAtual);
+    console.log("Velocidade: " + veiculo.velocidade);
+
 }
